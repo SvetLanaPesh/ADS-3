@@ -8,10 +8,11 @@ int cbinsearch(int *arr, int size, int value) {
         if (arr[m] == value) {
             count = m;
             r = m - 1;
-        } else if (arr[m] > value)
+        } else if (arr[m] > value) {
             r = m - 1;
-        else
+        } else {
             l = m + 1;
+        }
     }
     if (count == -1)
         return 0;
@@ -21,10 +22,11 @@ int cbinsearch(int *arr, int size, int value) {
         if (arr[m] == value) {
             count1 = m +1;
             l1 = m + 1;
-        } else if (arr[m] > value)
+        } else if (arr[m] > value) {
             r1 = m - 1;
-        else
+        } else {
             l1 = m + 1;
+        }
     }
     return count1 - count;
 }
